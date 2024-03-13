@@ -5,7 +5,16 @@
     - Routing of App
     - Login Form
     - Sign Up Form
-    - Validation
+    - Form Validation
+    - useRef Hook
+    - Firebase Setup
+    - Deploying our app to production
+    - Create SignUp User Account
+    - Implement sign in/signup api
+    - Created redux store with userslice
+    - Implemented signout
+    - Update Profile
+    - Fetch Movies from TMDB
 
 # Features
     - Login/SignUp Page
