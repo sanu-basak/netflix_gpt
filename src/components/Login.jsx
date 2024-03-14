@@ -3,17 +3,15 @@ import Header from "./Header"
 import {checkValidData} from '../utils/validate'
 import { auth } from "../utils/firebase"
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword  } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-
+import { BG_IMAGE,USER_AVATAR } from "../utils/constant";
 
 const Login = () => {
 
     const [isSignInForm,setIsSignInForm] = useState(true)
     const [errorMessage,setErrorMessage] = useState(null)
-    const navigate = useNavigate()
     const dispatch = useDispatch()
 
     const toggleSignInForm = () => {
@@ -38,12 +36,11 @@ const Login = () => {
                     const user = userCredential.user;
                     console.log(user)
                     updateProfile(user, {
-                        displayName: name.current.value, photoURL: "https://avatars.githubusercontent.com/u/29189226?v=4"
+                        displayName: name.current.value, photoURL: USER_AVATAR
                       }).then(() => {
                         // Profile updated!
                         const {uid,displayName,email,photoURL} = auth.currentUser;
                         dispatch(addUser({uid:uid,displayName:displayName,email:email,photoURL:photoURL}))
-                        navigate('/browse')
                       }).catch((error) => {
                         // An error occurred
                         // ...
@@ -62,7 +59,6 @@ const Login = () => {
                     // Signed in 
                     const user = userCredential.user;
                     console.log(user)
-                    navigate('/browse')
                 })
                 .catch((error) => {
                     const errorCode = error.code;
@@ -77,7 +73,7 @@ const Login = () => {
         <>  
             <Header/>
             <div>
-                <img className="absolute" alt="bg-img" src="https://assets.nflxext.com/ffe/siteui/vlv3/93da5c27-be66-427c-8b72-5cb39d275279/94eb5ad7-10d8-4cca-bf45-ac52e0a052c0/IN-en-20240226-popsignuptwoweeks-perspective_alpha_website_large.jpg"/>
+                <img className="absolute" alt="bg-img" src={BG_IMAGE}/>
             </div>
             <form onSubmit={(e) => e.preventDefault()} className="w-3/12 absolute p-12 bg-black my-36 m-auto right-0 left-0 text-white rounded-lg bg-opacity-80">
                 <h1 className="font-bold text-3xl py-4">{isSignInForm ? "Sign In" : "Sign Up" }</h1>
