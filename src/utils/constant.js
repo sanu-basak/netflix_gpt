@@ -16,4 +16,4 @@ export const SUPPORTED_LANGUAGE = [
   { identifier: "hi", name: "Hindi"},
   { identifier: "sp", name: "Spanish"}
 ]
-export const OPEN_AI_KEY="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"
+// export const OPEN_AI_KEY="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"
