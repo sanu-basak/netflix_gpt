@@ -8,7 +8,7 @@ export const API_OPTIONS = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNzY1ODBkNDQyNGM3MmQyOThjOTVjY2VlODcyOWUxMiIsInN1YiI6IjY1ZjE4ZWFkZDY0YWMyMDE2NDVlMjc0ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.wRkuWTjxSh8xGcl57MBaxWNKAboRAf6pIGvlxahZRiI'
+      // Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNzY1ODBkNDQyNGM3MmQyOThjOTVjY2VlODcyOWUxMiIsInN1YiI6IjY1ZjE4ZWFkZDY0YWMyMDE2NDVlMjc0ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.wRkuWTjxSh8xGcl57MBaxWNKAboRAf6pIGvlxahZRiI'
     }
 }
 export const SUPPORTED_LANGUAGE = [
